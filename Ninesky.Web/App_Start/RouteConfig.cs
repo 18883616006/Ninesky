@@ -16,7 +16,9 @@ namespace Ninesky.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                //修改默认路由
+                namespaces : new string[] { "Ninesky.Web.Controllers" }
             );
         }
     }
