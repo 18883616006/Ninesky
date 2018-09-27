@@ -34,8 +34,8 @@ namespace Ninesky.Web.Areas.Control.Controllers
         {
             if (ModelState.IsValid)
             {
-                //string _passowrd = Security.SHA256(loginViewModel.Password);
-                string _passowrd = loginViewModel.Password;
+                string _passowrd = Security.SHA256(loginViewModel.Password);
+                //string _passowrd = loginViewModel.Password;
                 var _response = adminManager.Verify(loginViewModel.Accounts, _passowrd);
                 if (_response.Code == 1)
                 {
